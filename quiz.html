@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đánh Giá Sức Khỏe Tinh Thần - Mất Ngủ, Stress, Trầm Cảm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ẢNH NỀN CỐ ĐỊNH -->
+    <div class="bg-parallax-wrapper">
+        <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="bg-overlay"></div>
+    </div>
+
+    <!-- THANH ĐIỀU HƯỚNG -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Logo Skibidi Talex" class="logo-img"> Skibidi<span>Talex</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+                <a href="quiz.html" class="nav-highlight">Trắc Nghiệm Tâm Lý</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- NỘI DUNG TRẮC NGHIỆM -->
+    <main style="padding-top: 150px; padding-bottom: 90px;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trung Tâm Sàng Lọc & Đánh Giá Tinh Thần Chuyên Sâu</h2>
+                <p>Thực hiện các bộ câu hỏi chuẩn y khoa để lượng hóa mức độ Mất Ngủ, Stress và Trầm Cảm của bạn</p>
+            </div>
+
+            <!-- CHỌN BÀI TEST -->
+            <div class="quiz-tabs">
+                <button class="quiz-tab-btn active" data-target="insomniaQuiz">🌙 Đánh Giá Mất Ngủ</button>
+                <button class="quiz-tab-btn" data-target="stressQuiz">⚡ Sàng Lọc Stress</button>
+                <button class="quiz-tab-btn" data-target="depressionQuiz">🌧️ Sàng Lọc Trầm Cảm </button>
+            </div>
+
+            <!-- 1. BÀI TEST MẤT NGỦ -->
+            <div id="insomniaQuiz" class="quiz-panel active glass-box">
+                <h3><i class="fa-solid fa-bed"></i> Bài Test Sàng Lọc Mất Ngủ </h3>
+                <p class="quiz-desc">Đánh giá triệu chứng rối loạn giấc ngủ của bạn trong 2 tuần gần nhất:</p>
+                
+                <div class="quiz-question-group">
+                    <p class="q-title">1. Bạn mất bao lâu để chìm vào giấc ngủ sau khi tắt đèn lên giường?</p>
+                    <label><input type="radio" name="iq1" value="0"> Dưới 15 phút </label>
+                    <label><input type="radio" name="iq1" value="1"> 15 - 30 phút </label>
+                    <label><input type="radio" name="iq1" value="2"> 30 - 60 phút </label>
+                    <label><input type="radio" name="iq1" value="3"> Trên 60 phút </label>
+                </div>
+
+                <div class="quiz-question-group">
+                    <p class="q-title">2. Bạn có hay bị tỉnh giấc giữa đêm và khó ngủ lại không?</p>
+                    <label><input type="radio" name="iq2" value="0"> Không bao giờ hoặc hiếm khi</label>
+                    <label><input type="radio" name="iq2" value="1"> Thỉnh thoảng (1-2 lần/tuần)</label>
+                    <label><input type="radio" name="iq2" value="2"> Thường xuyên (3-4 lần/tuần)</label>
+                    <label><input type="radio" name="iq2" value="3"> Hầu như đêm nào cũng bị</label>
+                </div>
+
+                <div class="quiz-question-group">
+                    <p class="q-title">3. Chất lượng giấc ngủ ảnh hưởng thế nào đến năng suất ban ngày của bạn?</p>
+                    <label><input type="radio" name="iq3" value="0"> Không ảnh hưởng, tôi vẫn tỉnh táo</label>
+                    <label><input type="radio" name="iq3" value="1"> Hơi mệt mỏi nhưng vẫn chịu được</label>
+                    <label><input type="radio" name="iq3" value="2"> Mệt mỏi rõ rệt, khó tập trung</label>
+                    <label><input type="radio" name="iq3" value="3"> Kiệt sức, uể oải, suy giảm nghiêm trọng</label>
+                </div>
+
+                <button class="btn btn-primary submit-quiz-btn" data-quiz="insomnia">Xem Kết Quả Mất Ngủ</button>
+                <div class="quiz-result-box" id="insomniaResult"></div>
+            </div>
+
+            <!-- 2. BÀI TEST STRESS -->
+            <div id="stressQuiz" class="quiz-panel glass-box">
+                <h3><i class="fa-solid fa-bolt"></i> Bài Test Đánh Giá Mức Độ Stress (PSS Mini)</h3>
+                <p class="quiz-desc">Đánh giá mức độ căng thẳng thần kinh của bạn trong thời gian gần đây:</p>
+                
+                <div class="quiz-question-group">
+                    <p class="q-title">1. Bạn cảm thấy căng thẳng, quá tải vì khối lượng công việc hoặc học tập?</p>
+                    <label><input type="radio" name="sq1" value="0"> Không bao giờ</label>
+                    <label><input type="radio" name="sq1" value="1"> Thỉnh thoảng</label>
+                    <label><input type="radio" name="sq1" value="2"> Khá thường xuyên</label>
+                    <label><input type="radio" name="sq1" value="3"> Rất thường xuyên</label>
+                </div>
+
+                <div class="quiz-question-group">
+                    <p class="q-title">2. Bạn có cảm giác cáu gắt, dễ bực bội với những chuyện nhỏ nhặt?</p>
+                    <label><input type="radio" name="sq2" value="0"> Không bao giờ</label>
+                    <label><input type="radio" name="sq2" value="1"> Thỉnh thoảng</label>
+                    <label><input type="radio" name="sq2" value="2"> Khá thường xuyên</label>
+                    <label><input type="radio" name="sq2" value="3"> Rất thường xuyên</label>
+                </div>
+
+                <div class="quiz-question-group">
+                    <p class="q-title">3. Bạn cảm thấy khó khăn trong việc thả lỏng cơ thể và thư giãn tâm trí?</p>
+                    <label><input type="radio" name="sq3" value="0"> Không bao giờ</label>
+                    <label><input type="radio" name="sq3" value="1"> Thỉnh thoảng</label>
+                    <label><input type="radio" name="sq3" value="2"> Khá thường xuyên</label>
+                    <label><input type="radio" name="sq3" value="3"> Rất thường xuyên</label>
+                </div>
+
+                <button class="btn btn-primary submit-quiz-btn" data-quiz="stress">Xem Kết Quả Stress</button>
+                <div class="quiz-result-box" id="stressResult"></div>
+            </div>
+
+            <!-- 3. BÀI TEST TRẦM CẢM -->
+            <div id="depressionQuiz" class="quiz-panel glass-box">
+                <h3><i class="fa-solid fa-cloud-rain"></i> Sàng Lọc Sức Khỏe Tinh Thần & Trầm Cảm </h3>
+                <p class="quiz-desc">Trong 2 tuần qua, bạn cảm thấy phiền muộn bởi các vấn đề sau ở mức độ nào?</p>
+                
+                <div class="quiz-question-group">
+                    <p class="q-title">1. Cảm thấy ít hứng thú hoặc không có niềm vui trong việc làm mọi thứ?</p>
+                    <label><input type="radio" name="dq1" value="0"> Không hề</label>
+                    <label><input type="radio" name="dq1" value="1"> Vài ngày</label>
+                    <label><input type="radio" name="dq1" value="2"> Hơn nửa số ngày</label>
+                    <label><input type="radio" name="dq1" value="3"> Gần như mọi ngày</label>
+                </div>
+
+                <div class="quiz-question-group">
+                    <p class="q-title">2. Cảm thấy chán nản, buồn bã hoặc tuyệt vọng?</p>
+                    <label><input type="radio" name="dq2" value="0"> Không hề</label>
+                    <label><input type="radio" name="dq2" value="1"> Vài ngày</label>
+                    <label><input type="radio" name="dq2" value="2"> Hơn nửa số ngày</label>
+                    <label><input type="radio" name="dq2" value="3"> Gần như mọi ngày</label>
+                </div>
+
+                <div class="quiz-question-group">
+                    <p class="q-title">3. Cảm thấy mệt mỏi hoặc ít năng lượng sống?</p>
+                    <label><input type="radio" name="dq3" value="0"> Không hề</label>
+                    <label><input type="radio" name="dq3" value="1"> Vài ngày</label>
+                    <label><input type="radio" name="dq3" value="2"> Hơn nửa số ngày</label>
+                    <label><input type="radio" name="dq3" value="3"> Gần như mọi ngày</label>
+                </div>
+
+                <button class="btn btn-primary submit-quiz-btn" data-quiz="depression">Xem Kết Quả Trầm Cảm</button>
+                <div class="quiz-result-box" id="depressionResult"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Quay lại Trang Chủ</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- CHÂN TRANG -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; Công Cụ Sàng Lọc Sức Khỏe Tinh Thần.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

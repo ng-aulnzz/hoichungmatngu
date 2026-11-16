@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hội Chứng Mất Ngủ</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ẢNH NỀN ĐỘNG PARALLAX (TỐI ƯU HÓA ĐỘ SÁNG BẢO VỆ MẮT) -->
+    <div class="bg-parallax-wrapper">
+        <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1511295742362-92c96b1fc485?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1920&auto=format&fit=crop');"></div>
+        <div class="bg-overlay"></div>
+    </div>
+
+    <!-- THANH ĐIỀU HƯỚNG -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Logo Skibidi Talex" class="logo-img"> Skibidi<span>Talex</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#overview">Tổng Quan</a>
+                <a href="#physiology">Cơ Chế Sinh Học</a>
+                <a href="#causes">Nguyên Nhân</a>
+                <a href="#symptoms">Triệu Chứng & Hậu Quả</a>
+                <a href="#music-station">Trạm Thư Giãn</a>
+                <a href="#embedded-source">Tài Liệu Y Khoa</a>
+                <a href="quiz.html" class="nav-highlight"><i class="fa-solid fa-file-lines"></i> Trắc Nghiệm Tâm Lý</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" data-bg="0">
+            <div class="hero-content animate-on-scroll">
+                <span class="badge"><i class="fa-solid fa-shield-heart"></i> Trang thông tin về hội chứng mất ngủ</span>
+                <h1><span>Hội Chứng Mất Ngủ</span></h1>
+                <p>Mất ngủ không chỉ là hiện tượng khó ngủ đơn thuần mà là một hội chứng rối loạn thần kinh phức tạp, ảnh hưởng sâu sắc đến cấu trúc não bộ, hệ miễn dịch và tuổi thọ con người.</p>
+                <div class="hero-buttons">
+                    <a href="#overview" class="btn btn-primary"><i class="fa-solid fa-book-medical"></i> Đọc Nghiên Cứu Chi Tiết</a>
+                    <a href="quiz.html" class="btn btn-secondary"><i class="fa-solid fa-brain"></i> Trắc Nghiệm Tâm Lý </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. TỔNG QUAN & PHÂN LOẠI LÂM SÀNG -->
+        <section id="overview" class="container section" data-bg="0">
+            <div class="section-title animate-on-scroll">
+                <h2>1. Tổng Quan Về Hội Chứng Mất Ngủ (Insomnia)</h2>
+                <p>Định nghĩa chuyên ngành y tế và tiêu chuẩn phân loại lâm sàng quốc tế</p>
+            </div>
+            <div class="content-grid-media animate-on-scroll">
+                <div class="media-box">
+                    <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop" alt="Người trằn trọc mất ngủ ban đêm">
+                    <span class="media-caption"><i class="fa-solid fa-stethoscope"></i> Rối loạn giấc ngủ làm gián đoạn chu kỳ phục hồi năng lượng của cơ thể.</span>
+                </div>
+                <div class="text-box-wrapper">
+                    <div class="glass-card" style="margin-bottom: 20px;">
+                        <h3><i class="fa-solid fa-bed-pulse" style="color: var(--primary);"></i> Bản Chất Y Khoa</h3>
+                        <p>Mất ngủ là tình trạng suy giảm thời gian hoặc chất lượng giấc ngủ đi kèm với tình trạng khó khởi phát giấc ngủ, khó duy trì hoặc thức giấc quá sớm. Người bệnh luôn cảm thấy mệt mỏi, suy giảm nhận thức và mất năng lượng trầm trọng vào ban ngày dù có đủ thời gian lên giường.</p>
+                    </div>
+                    <div class="glass-card">
+                        <h3><i class="fa-solid fa-clock-rotate-left" style="color: var(--primary);"></i> Phân Loại Theo Thời Gian</h3>
+                        <ul class="styled-list">
+                            <li><strong>Mất ngủ cấp tính (Acute Insomnia):</strong> Kéo dài từ vài ngày đến dưới 1 tháng, thường do sang chấn tâm lý, áp lực công việc hoặc thay đổi múi giờ.</li>
+                            <li><strong>Mất ngủ mãn tính (Chronic Insomnia):</strong> Kéo dài trên 3 tháng, xuất hiện tối thiểu 3 đêm mỗi tuần, đòi hỏi phác đồ điều trị chuyên khoa phức tạp.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CƠ CHẾ SINH HỌC & CHU KỲ GIẤC NGỦ -->
+        <section id="physiology" class="container section" data-bg="1">
+            <div class="section-title animate-on-scroll">
+                <h2>2. Cơ Chế Sinh Học & Chu Kỳ Giấc Ngủ</h2>
+                <p>Vai trò của tuyến tùng, hormone Melatonin và các giai đoạn sóng não</p>
+            </div>
+            
+            <div class="grid-2" style="margin-bottom: 40px;">
+                <div class="glass-card animate-on-scroll">
+                    <h3><i class="fa-solid fa-atom" style="color: var(--accent);"></i> Vai Trò Của Melatonin & Adenosine</h3>
+                    <p>Khi màn buông xuống, võng mạc gửi tín hiệu đến nhân trên chéo thị giác kích thích tuyến tùng tiết ra <strong>Melatonin</strong> – hormone điều hòa đồng hồ sinh học. Song song đó, chất hóa học <strong>Adenosine</strong> tích tụ dần trong não suốt thời gian thức để tạo áp lực buồn ngủ. Sự mất cân bằng hai chất này là nguyên nhân chính gây mất ngủ.</p>
+                </div>
+                <div class="glass-card animate-on-scroll">
+                    <h3><i class="fa-solid fa-wave-square" style="color: var(--accent);"></i> Các Giai Đoạn Giấc Ngủ Chu Kỳ</h3>
+                    <p>Một giấc ngủ sinh lý khỏe mạnh gồm các chu kỳ kéo dài 90 phút luân phiên giữa <strong>Giấc ngủ nông (NREM)</strong> và <strong>Giấc ngủ sâu/REM (sóng Delta)</strong>. Người mắc hội chứng mất ngủ thường bị kẹt ở giai đoạn NREM nông, không thể bước vào giấc ngủ sâu để thanh lọc độc tố tế bào thần kinh.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. NGUYÊN NHÂN GÂY MẤT NGỦ -->
+        <section id="causes" class="container section" data-bg="1">
+            <div class="section-title animate-on-scroll">
+                <h2>3. Nguyên Nhân Gây Mất Ngủ Chuyên Sâu</h2>
+                <p>Phân tích đa chiều từ tâm lý, thần kinh, lối sống đến bệnh lý nội ngoại khoa</p>
+            </div>
+
+            <div class="content-grid-media reverse animate-on-scroll" style="margin-bottom: 50px;">
+                <div class="media-box">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" alt="Ánh sáng xanh thiết bị điện tử">
+                    <span class="media-caption"><i class="fa-solid fa-laptop-code"></i> Sóng ngắn điện từ ức chế trực tiếp quá trình tổng hợp Melatonin.</span>
+                </div>
+                <div class="text-box-wrapper">
+                    <div class="glass-card">
+                        <h3><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent);"></i> Tác Nhân Xã Hội & Công Nghệ Hiện Đại</h3>
+                        <p>Áp lực cạnh tranh kinh tế đô thị, tình trạng quá tải thông tin số (Information Overload) kết hợp thói quen sử dụng điện thoại trước khi ngủ kích thích hệ thống thần kinh giao cảm hoạt động quá mức, duy trì trạng thái "chiến đấu hoặc bỏ chạy" (Fight or Flight) ngay cả khi đã lên giường.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-4">
+                <div class="glass-feature animate-on-scroll">
+                    <i class="fa-solid fa-brain"></i>
+                    <h4>Rối Loạn Thần Kinh</h4>
+                    <p>Trầm cảm, rối loạn lo âu lan tỏa và stress mãn tính kích thích cortisol.</p>
+                </div>
+                <div class="glass-feature animate-on-scroll">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h4>Ức Chế Melatonin</h4>
+                    <p>Ánh sáng xanh từ màn hình đánh lừa não bộ rằng trời vẫn còn ban ngày.</p>
+                </div>
+                <div class="glass-feature animate-on-scroll">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h4>Lạm Dụng Chất Kích Thích</h4>
+                    <p>Caffeine, nicotine và rượu bia làm gián đoạn cấu trúc sóng não REM.</p>
+                </div>
+                <div class="glass-feature animate-on-scroll">
+                    <i class="fa-solid fa-house-chimney-medical"></i>
+                    <h4>Bệnh Lý Đau Mạn Tính</h4>
+                    <p>Viêm khớp, trào ngược dạ dày thực quản (GERD), hội chứng chân không yên.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TRIỆU CHỨNG & HẬU QUẢ TOÀN THÂN -->
+        <section id="symptoms" class="container section" data-bg="2">
+            <div class="section-title animate-on-scroll">
+                <h2>4. Biểu Hiện Lâm Sàng & Biến Chứng Nguy Hiểm</h2>
+                <p>Hệ lụy khôn lường khi tình trạng thiếu ngủ kéo dài tàn phá cơ thể</p>
+            </div>
+            <div class="grid-2">
+                <div class="glass-box animate-on-scroll">
+                    <h3><i class="fa-solid fa-notes-medical"></i> Triệu Chứng Nhận Diện Lâm Sàng</h3>
+                    <ul class="check-list">
+                        <li>Trằn trọc mất trên 30 - 45 phút mới có thể chợp mắt được mỗi đêm.</li>
+                        <li>Thức giấc giữa đêm nhiều lần (đặc biệt khung giờ 3h - 4h sáng) và rất khó ngủ lại.</li>
+                        <li>Cảm giác đầu óc nặng nề, ê ẩm, mệt rã rời ngay khi vừa mở mắt thức dậy.</li>
+                        <li>Suy giảm trí nhớ ngắn hạn, kém tập trung, dễ cáu gắt và lo âu vô cớ.</li>
+                    </ul>
+                </div>
+                <div class="glass-box animate-on-scroll">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> Biến Chứng Lên Các Cơ Quan</h3>
+                    <ul class="check-list">
+                        <li><strong>Hệ Tim Mạch:</strong> Tăng huyết áp mạn tính, xơ vữa động mạch, nguy cơ đột quỵ và nhồi máu cơ tim.</li>
+                        <li><strong>Hệ Miễn Dịch:</strong> Giảm sản sinh tế bào sát thủ tự nhiên (NK cells), tăng nguy cơ mắc bệnh tự miễn.</li>
+                        <li><strong>Hệ Nội Tiết:</strong> Rối loạn dung nạp glucose, tăng insulin máu dẫn đến đái tháo đường tuýp 2.</li>
+                        <li><strong>Hệ Thần Kinh:</strong> Teo vùng hồi hải mã (Hippocampus), đẩy nhanh quá trình lão hóa tế bào não.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. TRẠM ÂM NHẠC THƯ GIÃN -->
+        <section id="music-station" class="container section" data-bg="2">
+            <div class="section-title animate-on-scroll">
+                <h2>5. Trạm Trị Liệu Âm Thanh </h2>
+                <p>Công nghệ âm thanh nhân tạo giúp bản thân đi vào trạng thái thư giãn</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="glass-tool animate-on-scroll">
+                    <h3><i class="fa-solid fa-headphones-simple"></i> Trình Phát Âm Thanh Thiên Nhiên</h3>
+                    <p>Kích thích phản xạ âm thanh giúp làm chậm nhịp tim trực tiếp:</p>
+                    <div class="sound-buttons">
+                        <button class="sound-btn" data-sound="rain"><i class="fa-solid fa-cloud-rain"></i> Tiếng Mưa Rơi</button>
+                        <button class="sound-btn" data-sound="waves"><i class="fa-solid fa-water"></i> Sóng Biển Đêm</button>
+                        <button class="sound-btn" data-sound="whitenoise"><i class="fa-solid fa-wind"></i> Tiếng Ồn Trắng</button>
+                    </div>
+                    <div class="audio-status" id="audioStatus">Trạng thái: Đang dừng phát</div>
+                </div>
+
+                <div class="glass-tool animate-on-scroll">
+                    <h3><i class="fa-solid fa-music"></i> Nhạc Trị Liệu Không Lời </h3>
+                    <p>Giai điệu hòa tấu chữa lành tâm trí và đưa vào giấc ngủ sâu:</p>
+                    <div style="margin-top: 15px;">
+                        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A848956036&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/soothingrelaxation" title="Soothing Relaxation" target="_blank" style="color: #cccccc; text-decoration: none;">Soothing Relaxation</a> · <a href="https://soundcloud.com/soothingrelaxation/you-me-1" title="You &amp; Me" target="_blank" style="color: #cccccc; text-decoration: none;">You &amp; Me</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TÀI LIỆU Y KHOA NHÚNG TRỰC TIẾP -->
+        <section id="embedded-source" class="container section" data-bg="0">
+            <div class="section-title animate-on-scroll">
+                <h2>6. Tài Liệu Y Khoa Chính Thống Tham Khảo</h2>
+                <p>Tra cứu trực tiếp các nghiên cứu chuyên sâu về bệnh lý mất ngủ từ bệnh viện uy tín</p>
+            </div>
+            <div class="glass-box animate-on-scroll" style="padding: 15px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding: 0 10px;">
+                    <span style="font-size: 0.9rem; color: var(--text-muted);"><i class="fa-solid fa-hospital"></i> Nguồn: Bệnh viện Đa khoa Tâm Anh (Chuyên mục Thần kinh & Giấc ngủ)</span>
+                    <a href="https://tamanhhospital.vn/benh/mat-ngu/" target="_blank" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.85rem;">Mở Tab Mới <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="iframe-container">
+                    <iframe src="https://tamanhhospital.vn/benh/mat-ngu/" title="Tài liệu Mất ngủ Tâm Anh"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CHÂN TRANG -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; Trang thông tin về hội chứng mất ngủ được xây dựng bởi Skibidi Talex</p>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">Thông tin mang tính chất tham khảo y khoa, không thay thế chẩn đoán từ bác sĩ chuyên khoa.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
