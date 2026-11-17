@@ -36,76 +36,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".animate-on-scroll").forEach(el => observer.observe(el));
 
-    // --- 2. WEB AUDIO API (ÂM THANH THƯ GIÃN) ---
+    // --- 2. HỆ THỐNG PHÁT ÂM THANH BẰNG FILE MP3 ---
     const soundBtns = document.querySelectorAll(".sound-btn");
     if (soundBtns.length > 0) {
         const audioStatus = document.getElementById("audioStatus");
-        let audioCtx = null;
-        let noiseNode = null;
-        let isPlaying = false;
+        
+        // Tạo trình phát nhạc ẩn (Audio Element)
+        const audioPlayer = new Audio();
+        audioPlayer.loop = true; // Lặp lại liên tục
         let activeBtn = null;
+
+        // DANH SÁCH LINK MP3 TƯƠNG ỨNG
+        // Đổi link này thành file trong máy nếu cần (VD: 'mua.mp3')
+        const audioSources = {
+            'rain': 'rain.mp3',
+            'waves': 'waves.mp3',
+            'whitenoise': 'whitenoise.mp3'
+        };
+
+        const audioNames = {
+            'rain': 'Đang phát: Tiếng Mưa Rơi (MP3)',
+            'waves': 'Đang phát: Sóng Biển Đêm (MP3)',
+            'whitenoise': 'Đang phát: Tiếng Gió (MP3)'
+        };
 
         soundBtns.forEach(btn => {
             btn.addEventListener("click", () => {
                 const soundType = btn.getAttribute("data-sound");
-                if (isPlaying && activeBtn === btn) {
-                    stopSound();
+
+                // Nếu click lại nút đang phát -> Tắt nhạc
+                if (activeBtn === btn) {
+                    audioPlayer.pause();
+                    btn.classList.remove("active");
+                    activeBtn = null;
+                    audioStatus.textContent = "Trạng thái: Đang dừng phát";
                     return;
                 }
-                stopSound();
-                playSound(soundType);
-                soundBtns.forEach(b => b.classList.remove("active"));
+
+                // Tắt nút cũ nếu đang phát nhạc khác
+                if (activeBtn) {
+                    activeBtn.classList.remove("active");
+                }
+
+                // Cập nhật nút mới
                 btn.classList.add("active");
                 activeBtn = btn;
+                audioStatus.textContent = "Đang tải âm thanh...";
+                
+                // Gắn MP3 và chạy
+                audioPlayer.src = audioSources[soundType];
+                audioPlayer.play().then(() => {
+                    audioStatus.textContent = audioNames[soundType];
+                }).catch(() => {
+                    audioStatus.textContent = "Lỗi: Trình duyệt chặn phát âm thanh tự động!";
+                });
             });
         });
-
-        function playSound(type) {
-            try {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                const bufferSize = 2 * audioCtx.sampleRate;
-                const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-                const output = noiseBuffer.getChannelData(0);
-                for (let i = 0; i < bufferSize; i++) { output[i] = Math.random() * 2 - 1; }
-
-                const whiteNoise = audioCtx.createBufferSource();
-                whiteNoise.buffer = noiseBuffer;
-                whiteNoise.loop = true;
-
-                const filter = audioCtx.createBiquadFilter();
-                if (type === 'rain') { filter.type = 'lowpass'; filter.frequency.value = 800; }
-                else if (type === 'waves') { filter.type = 'bandpass'; filter.frequency.value = 400; }
-                else { filter.type = 'lowpass'; filter.frequency.value = 1200; }
-
-                const gainNode = audioCtx.createGain();
-                gainNode.gain.value = 0.15;
-
-                whiteNoise.connect(filter);
-                filter.connect(gainNode);
-                gainNode.connect(audioCtx.destination);
-
-                whiteNoise.start();
-                noiseNode = whiteNoise;
-                isPlaying = true;
-
-                const names = {
-                    'rain': 'Đang phát: Tiếng Mưa Rơi nhân tạo',
-                    'waves': 'Đang phát: Sóng Biển Đêm thư giãn',
-                    'whitenoise': 'Đang phát: Tiếng Ồn Trắng tiêu chuẩn'
-                };
-                audioStatus.textContent = names[type];
-            } catch (e) {
-                audioStatus.textContent = "Trình duyệt chặn Audio tự động. Hãy thử lại!";
-            }
-        }
-
-        function stopSound() {
-            if (noiseNode) { noiseNode.stop(); noiseNode.disconnect(); noiseNode = null; }
-            if (audioCtx) { audioCtx.close(); audioCtx = null; }
-            isPlaying = false;
-            if (activeBtn) { activeBtn.classList.remove("active"); activeBtn = null; }
-            audioStatus.textContent = "Trạng thái: Đang dừng phát";
-        }
     }
 
     // --- 3. HỆ THỐNG TRẮC NGHIỆM TÂM LÝ ---
